@@ -17,15 +17,20 @@
 
 ## Build
 
+Modify and build the container image from source:
 ```
-docker build -t archlinux:bootstrap .
+git clone https://github.com/terencewestphal/docker-archlinux.git
+cd docker-archlinux
+```
+```
+docker build -t archlinux:<tag> .
 ```
 
 ## Usage
 
 ### Systemd
 
-Run in detached mode
+Run in detached mode:
 ```
 docker run --rm \
            --detach \
@@ -36,10 +41,10 @@ docker run --rm \
            --security-opt=seccomp:unconfined \
            --hostname archlinux.io \
            --name archlinux \
-           archlinux:bootstrap
+           archlinux
 ```
 
-Enter container
+Enter container:
 ```
 docker exec --tty --interactive archlinux zsh  
 ```
