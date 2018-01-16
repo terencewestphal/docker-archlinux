@@ -1,6 +1,8 @@
+[![Docker Build Statu](https://img.shields.io/docker/build/terencewestphal/archlinux.svg)](https://hub.docker.com/r/terencewestphal/archlinux/builds/) ![Docker Stars](https://img.shields.io/docker/stars/terencewestphal/archlinux.svg) [![Docker Pulls](https://img.shields.io/docker/pulls/terencewestphal/archlinux.svg)](https://hub.docker.com/r/terencewestphal/archlinux/) 
+
 # Docker - Arch Linux
 
-# <img src="archlinux-logo.png" alt="Arch Linux" width="350">
+[![Minecraft](https://github.com/terencewestphal/docker-archlinux/blob/master/archlinux-logo.png?raw=true)](https://archlinux.org)
 
 ## Features
 
