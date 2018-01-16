@@ -1,0 +1,5 @@
+*
+!bootstrap
+!archlinux-bootstrap-*-x86_64.tar.gz*
+!get-archlinux-bootstrap.sh
+!exclude

@@ -1,0 +1,7 @@
+[Unit]
+Description=Arch Linux Docker container target
+Requires=
+Wants=systemd-journald.service systemd-journal-flush.service
+Conflicts=
+After=
+AllowIsolate=yes

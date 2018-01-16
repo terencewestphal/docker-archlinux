@@ -1,0 +1,4 @@
+root.x86_64/README
+root.x86_64/etc/motd
+root.x86_64/etc/locale.gen
+root.x86_64/dev
