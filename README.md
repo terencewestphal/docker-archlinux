@@ -30,21 +30,41 @@ docker build -t archlinux:<tag> .
 
 ### Systemd
 
-Run in detached mode:
+**Run in detached mode:**
 ```
 docker run --rm \
            --detach \
-           --tmpfs /tmp \
-           --tmpfs /run \
+           --tmpfs /tmp /run \
            --volume /sys/fs/cgroup:/sys/fs/cgroup:ro \
            --cap-add SYS_ADMIN \
            --security-opt=seccomp:unconfined \
            --hostname archlinux.io \
            --name archlinux \
-           archlinux
+           archlinux:latest
 ```
 
-Enter container:
+```
+Usage:	docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Options:
+    --rm                 Automatically remove the container when it exits
+-d, --detach             Run container in background and print container ID
+    --tmpfs list         Mount a tmpfs directory
+-v, --volume list        Bind mount a volume
+    --cap-add list       Add Linux capabilities
+    --security-opt list  Security Options
+-h, --hostname string    Container host name
+    --name string        Assign a name to the container
+```
+
+**Enter container:**
 ```
 docker exec --tty --interactive archlinux zsh  
+```
+```
+Usage:	docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Options:
+-t, --tty                Allocate a pseudo-TTY
+-i, --interactive        Keep STDIN open even if not attached
 ```
