@@ -15,6 +15,18 @@
 * Docker 17.05 or higher (for multi-stage builds) 
 
 
+## Pull
+
+Get the latest version:
+```
+docker pull terencewestphal/archlinux:latest
+```
+
+Get a specific version:
+```
+docker pull terencewestphal/archlinux:<YYYY.MM.DD>
+```
+
 ## Build
 
 Modify and build the container image from source:
@@ -34,13 +46,14 @@ docker build -t archlinux:<tag> .
 ```
 docker run --rm \
            --detach \
-           --tmpfs /tmp /run \
+           --tmpfs /tmp \
+           --tmpfs /run \
            --volume /sys/fs/cgroup:/sys/fs/cgroup:ro \
            --cap-add SYS_ADMIN \
            --security-opt=seccomp:unconfined \
            --hostname archlinux.io \
            --name archlinux \
-           archlinux:latest
+           terencewestphal/archlinux:latest
 ```
 
 ```
@@ -59,7 +72,7 @@ Options:
 
 **Enter container:**
 ```
-docker exec --tty --interactive archlinux zsh  
+docker exec --tty --interactive archlinux zsh
 ```
 ```
 Usage:	docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
